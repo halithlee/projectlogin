@@ -1,0 +1,66 @@
+{%extends "base.html"%}
+
+{%block title%}
+Student Table
+{%endblock%}
+
+{%block content%}
+<style>
+    table{
+        border: 1px solid white;
+        border-collapse: collapse;
+        margin-top:3rem ;
+        background-color: black;
+    
+    }
+    tr{
+        border: 1px solid white;
+        
+       
+    }
+    th{
+        border: 1px solid white;
+        width: 10rem;
+        height: 2rem;
+        text-align: center;
+        color: white;
+    }
+    td{
+        border: 1px solid white;
+        width: 10rem;
+        height: 4rem;
+        color: white;
+        text-align: center;
+    }
+
+</style>
+<nav class="topnav">
+    <a href="{{url_for('home')}}">Home</a></td>
+    <a href="{{url_for('add')}}">Add</a></td>
+    <a href="{{url_for('logout')}}">Logout</a></td>
+</nav>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Roll_NO</th>
+        <th colspan="5">Marks</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {%for details in data%}
+    <tr>
+        <td>{{details.Name}}</td>
+        <td>{{details.Age}}</td>
+        <td>{{details.Roll_NO}}</td>
+        {%for mark in details.Marks%}
+        <td>{{mark}}</td>
+        {%endfor%}
+        <td><a href="{{url_for('edit',id=loop.index)}}">Edit</a></td>
+        <td><a href="{{url_for('delete',id=loop.index)}}">Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
+
+
+

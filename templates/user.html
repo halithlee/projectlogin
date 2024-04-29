@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+
+{%block title%}
+Student Table
+{%endblock%}
+
+<style>
+    .name{
+        margin-top: 6rem;
+    }
+    .pwd{
+        margin-top: 6rem;
+    }
+    .login{
+        padding-top: 10rem;
+        
+    }
+</style>
+{%block content%}
+<form action="" method="post">
+    <div class="name">
+    <label for="name">User Name</label>
+    <input type="text" name="name" placeholder="User name">
+    </div>
+    <div class="pwd">
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password">
+    </div>
+    <div class="login">
+    <input type="submit" value="Log in">
+    </div>
+</form>
+{%endblock%}

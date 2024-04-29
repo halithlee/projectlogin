@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+
+{%block title%}
+Student Table
+{%endblock%}
+
+{%block content%}
+
+<form action=""method="post">
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" placeholder="Name" value="{{from_data.Name}}"><br><br>
+    <label for="Age">Age:</label>
+    <input type="number" name="Age" placeholder="Age" value="{{from_data.Age}}"><br><br>
+    <label for="Roll_NO">Roll No:</label>
+    <input type="text" name="Roll_NO" placeholder="Roll_NO" value="{{from_data.Roll_NO}}"><br><br>
+    <label for="sub1">Subject1:</label>
+    <input type="number" name="sub1" placeholder="Mark" value="{{from_data.Marks[0]}}"><br><br>
+    <label for="sub2">Subject2:</label>
+    <input type="number" name="sub2" placeholder="Mark" value="{{from_data.Marks[1]}}"><br><br>
+    <label for="sub3">Subject3:</label>
+    <input type="number" name="sub3" placeholder="Mark" value="{{from_data.Marks[2]}}"><br><br>
+    <label for="sub4">Subject 4:</label>
+    <input type="number" name="sub4" placeholder="Mark" value="{{from_data.Marks[3]}}"><br><br>
+    <label for="sub5">Subject 5:</label>
+    <input type="number" name="sub5" placeholder="Mark" value="{{from_data.Marks[4]}}"><br><br>
+    <input type="submit" value="Submit">
+</form>
+{%endblock%}
